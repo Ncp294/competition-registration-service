@@ -19,6 +19,8 @@ services:
       context: ./template-service
       dockerfile: Dockerfile
     container_name: template-service
+    ports:
+      - "8000:8000"
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
@@ -32,3 +34,6 @@ services:
       timeout: 5s
       retries: 5
       start_period: 10s
+
+volumes:
+  redis-data:

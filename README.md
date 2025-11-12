@@ -31,9 +31,10 @@ competition-registration-system/\
 ├── architecture-diagram.png\
 ├── docker-compose.yml\
 ├── template-service/\
+│&emsp;&ensp;├── app/\
+│&emsp;&ensp;│&emsp;&ensp;└── main.py\
 │&emsp;&ensp;├── Dockerfile\
 │&emsp;&ensp;├── requirements.txt\
-│&emsp;&ensp;├── main.py\
 │&emsp;&ensp;└── models.py\
 └── user-service/\
 &emsp;&emsp; ├── Dockerfile\
