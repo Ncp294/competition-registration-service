@@ -37,7 +37,8 @@ competition-registration-system/\
 │&emsp;&ensp;├── requirements.txt\
 │&emsp;&ensp;└── models.py\
 └── user-service/\
+&emsp;&emsp; ├── app/\
+&emsp;&emsp;&ensp;│&emsp;&ensp;└── main.py\
 &emsp;&emsp; ├── Dockerfile\
 &emsp;&emsp; ├── requirements.txt\
-&emsp;&emsp; ├── main.py\
 &emsp;&emsp; └── models.py

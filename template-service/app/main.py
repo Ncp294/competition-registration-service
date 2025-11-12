@@ -1,10 +1,9 @@
 import os
 import time
-from typing import Optional
 
 import redis
 from fastapi import FastAPI
-from pydantic import BaseModel
+from models import Dependency, HealthData
 
 app = FastAPI()
 
@@ -14,19 +13,6 @@ redisClient = redis.Redis(
     port=int(os.getenv("REDIS_PORT", 6379)),
     decode_responses=True
 )
-
-
-# Pydantic models
-class Dependency(BaseModel):
-    service: str
-    status: str
-    response_time_ms: int
-
-
-class HealthData(BaseModel):
-    service: str
-    status: str
-    dependencies: Optional[list[Dependency]]
 
 
 # Endpoints
